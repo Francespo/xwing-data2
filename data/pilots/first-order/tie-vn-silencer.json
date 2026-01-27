@@ -21,19 +21,46 @@
     "4KR",
     "5FB"
   ],
-  "dialCodes": ["Tvn"],
+  "dialCodes": [
+    "Tvn"
+  ],
   "faction": "firstorder",
   "stats": [
-    { "arc": "Front Arc", "type": "attack", "value": 3 },
-    { "type": "agility", "value": 3 },
-    { "type": "hull", "value": 4 },
-    { "type": "shields", "value": 2 }
+    {
+      "arc": "Front Arc",
+      "type": "attack",
+      "value": 3
+    },
+    {
+      "type": "agility",
+      "value": 3
+    },
+    {
+      "type": "hull",
+      "value": 4
+    },
+    {
+      "type": "shields",
+      "value": 2
+    }
   ],
   "actions": [
-    { "difficulty": "White", "type": "Focus" },
-    { "difficulty": "White", "type": "Lock" },
-    { "difficulty": "White", "type": "Barrel Roll" },
-    { "difficulty": "White", "type": "Boost" }
+    {
+      "difficulty": "White",
+      "type": "Focus"
+    },
+    {
+      "difficulty": "White",
+      "type": "Lock"
+    },
+    {
+      "difficulty": "White",
+      "type": "Barrel Roll"
+    },
+    {
+      "difficulty": "White",
+      "type": "Boost"
+    }
   ],
   "icon": "https://infinitearenas.com/xw2/images/shipicons/first-order/I_TIESilencer.png",
   "pilots": [
@@ -62,7 +89,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/blackout.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -71,21 +100,39 @@
       "caption": "Tormented Apprentice",
       "initiative": 5,
       "limited": 1,
-      "cost": 7,
-      "loadout": 24,
+      "cost": 16,
+      "loadout": 10,
       "ability": "After you defend, you may spend 1 [Force] to assign the I'll Show You the Dark Side condition to the attacker.",
-      "force": { "value": 2, "recovers": 1, "side": ["dark"] },
+      "force": {
+        "value": 2,
+        "recovers": 1,
+        "side": [
+          "dark"
+        ]
+      },
       "shipAbility": {
         "name": "Autothrusters",
         "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
       },
-      "conditions": ["illshowyouthedarkside"],
-      "slots": ["Torpedo", "Missile", "Force Power", "Talent", "Tech", "Configuration"],
+      "conditions": [
+        "illshowyouthedarkside"
+      ],
+      "slots": [
+        "Torpedo",
+        "Missile",
+        "Force Power",
+        "Talent",
+        "Tech",
+        "Configuration"
+      ],
       "image": "https://infinitearenas.com/xw2/images/pilots/kyloren.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/kyloren.png",
       "standard": true,
       "extended": true,
-      "keywords": ["Dark Side", "TIE"],
+      "keywords": [
+        "Dark Side",
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -93,19 +140,27 @@
       "xws": "firstordertestpilot",
       "initiative": 4,
       "limited": 0,
-      "cost": 5,
+      "cost": 12,
       "loadout": 5,
       "text": "Engineered for incredible speed and precise handling, the TIE Silencer is devastating in the hands of those who can unlock its full potential. Any lesser pilot could easily be overwhelmed and lose control of the nimble craft.",
       "shipAbility": {
         "name": "Autothrusters",
         "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
       },
-      "slots": ["Talent", "Torpedo", "Missile", "Tech", "Configuration"],
+      "slots": [
+        "Talent",
+        "Torpedo",
+        "Missile",
+        "Tech",
+        "Configuration"
+      ],
       "image": "https://infinitearenas.com/xw2/images/pilots/firstordertestpilot.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/firstordertestpilot.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -121,12 +176,20 @@
         "name": "Autothrusters",
         "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
       },
-      "slots": ["Talent", "Torpedo", "Missile", "Tech", "Configuration"],
+      "slots": [
+        "Talent",
+        "Torpedo",
+        "Missile",
+        "Tech",
+        "Configuration"
+      ],
       "image": "https://infinitearenas.com/xw2/images/pilots/recoil.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/recoil.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -142,12 +205,20 @@
         "name": "Autothrusters",
         "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
       },
-      "slots": ["Talent", "Torpedo", "Missile", "Tech", "Configuration"],
+      "slots": [
+        "Talent",
+        "Torpedo",
+        "Missile",
+        "Tech",
+        "Configuration"
+      ],
       "image": "https://infinitearenas.com/xw2/images/pilots/avenger.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/avenger.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -155,19 +226,27 @@
       "xws": "sienarjaemusengineer",
       "initiative": 1,
       "limited": 0,
-      "cost": 5,
+      "cost": 11,
       "loadout": 5,
       "text": "Developed by Sienar-Jaemus Fleet Systems as a successor to the vaunted TIE Defender, the TIE/vn Silencer incorporates bleeding-edge technologies developed at research facilities hidden in the Unknown Regions.",
       "shipAbility": {
         "name": "Autothrusters",
         "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
       },
-      "slots": ["Tech", "Torpedo", "Missile", "Modification", "Configuration"],
+      "slots": [
+        "Tech",
+        "Torpedo",
+        "Missile",
+        "Modification",
+        "Configuration"
+      ],
       "image": "https://infinitearenas.com/xw2/images/pilots/sienarjaemusengineer.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/sienarjaemusengineer.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -182,13 +261,21 @@
       "caption": "Adrenaline Junkie",
       "standard": true,
       "extended": true,
-      "slots": ["Tech", "Talent", "Talent", "Missile", "Configuration"],
+      "slots": [
+        "Tech",
+        "Talent",
+        "Talent",
+        "Missile",
+        "Configuration"
+      ],
       "ability": "While you are damaged, treat your initiative as 6.",
       "cost": 5,
       "loadout": 11,
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/rush.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/rush.png",
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     }
   ]

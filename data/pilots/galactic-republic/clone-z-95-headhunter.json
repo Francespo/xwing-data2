@@ -20,18 +20,42 @@
     "4FW",
     "4KR"
   ],
-  "dialCodes": ["Z95"],
+  "dialCodes": [
+    "Z95"
+  ],
   "faction": "galacticrepublic",
   "stats": [
-    { "arc": "Front Arc", "type": "attack", "value": 2 },
-    { "type": "agility", "value": 2 },
-    { "type": "hull", "value": 2 },
-    { "type": "shields", "value": 2 }
+    {
+      "arc": "Front Arc",
+      "type": "attack",
+      "value": 2
+    },
+    {
+      "type": "agility",
+      "value": 2
+    },
+    {
+      "type": "hull",
+      "value": 2
+    },
+    {
+      "type": "shields",
+      "value": 2
+    }
   ],
   "actions": [
-    { "difficulty": "White", "type": "Focus" },
-    { "difficulty": "White", "type": "Lock" },
-    { "difficulty": "Red", "type": "Barrel Roll" }
+    {
+      "difficulty": "White",
+      "type": "Focus"
+    },
+    {
+      "difficulty": "White",
+      "type": "Lock"
+    },
+    {
+      "difficulty": "Red",
+      "type": "Barrel Roll"
+    }
   ],
   "icon": "???",
   "pilots": [
@@ -60,7 +84,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Drift”",
@@ -85,7 +111,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Boost”",
@@ -111,7 +139,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Stub”",
@@ -128,11 +158,17 @@
       },
       "image": "https://infinitearenas.com/xw2/images/pilots/stub.png",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/stub.png",
-      "slots": ["Talent", "Sensor", "Modification"],
+      "slots": [
+        "Talent",
+        "Sensor",
+        "Modification"
+      ],
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Knack”",
@@ -158,7 +194,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Hawk”",
@@ -184,14 +222,16 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "7th Sky Corps Pilot",
       "initiative": 2,
       "limited": 0,
-      "cost": 3,
-      "loadout": 3,
+      "cost": 7,
+      "loadout": 8,
       "xws": "7thskycorpspilot",
       "text": "",
       "shipAbility": {
@@ -207,14 +247,16 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "Reaper Squadron Scout",
       "initiative": 3,
       "limited": 0,
-      "cost": 3,
-      "loadout": 2,
+      "cost": 8,
+      "loadout": 11,
       "xws": "reapersquadronscout",
       "text": "Despite the Clone Z-95's unglamorous reputation, Reaper Squadron has become legendary for their skill with this fighter in far-flung engagements, such as the skirmish over Castilon.",
       "shipAbility": {
@@ -230,7 +272,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Slider”",
@@ -241,7 +285,10 @@
       "loadout": 3,
       "xws": "slider",
       "ability": "When you reveal a [2 [Bank Left]] or [2 [Bank Right]] maneuver, you may spend 2 [Charge] to execute it as a sideslip.",
-      "charges": { "value": 2, "recovers": 1 },
+      "charges": {
+        "value": 2,
+        "recovers": 1
+      },
       "shipAbility": {
         "name": "Versatile Frame",
         "text": "You can equip 1 [Torpedo] or [Missile] upgrade. While your revealed maneuver is blue, add white [Boost] to your action bar."
@@ -258,7 +305,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     },
     {
       "name": "“Warthog”",
@@ -283,7 +332,9 @@
       "standard": true,
       "extended": true,
       "epic": true,
-      "keywords": ["Clone"]
+      "keywords": [
+        "Clone"
+      ]
     }
   ]
 }

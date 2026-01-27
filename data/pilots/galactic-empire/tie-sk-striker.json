@@ -20,17 +20,38 @@
     "3FB",
     "3NW"
   ],
-  "dialCodes": ["TS"],
+  "dialCodes": [
+    "TS"
+  ],
   "faction": "galacticempire",
   "stats": [
-    { "arc": "Front Arc", "type": "attack", "value": 3 },
-    { "type": "agility", "value": 2 },
-    { "type": "hull", "value": 4 }
+    {
+      "arc": "Front Arc",
+      "type": "attack",
+      "value": 3
+    },
+    {
+      "type": "agility",
+      "value": 2
+    },
+    {
+      "type": "hull",
+      "value": 4
+    }
   ],
   "actions": [
-    { "difficulty": "White", "type": "Focus" },
-    { "difficulty": "White", "type": "Evade" },
-    { "difficulty": "White", "type": "Barrel Roll" }
+    {
+      "difficulty": "White",
+      "type": "Focus"
+    },
+    {
+      "difficulty": "White",
+      "type": "Evade"
+    },
+    {
+      "difficulty": "White",
+      "type": "Barrel Roll"
+    }
   ],
   "icon": "https://infinitearenas.com/xw2/images/shipicons/galactic-empire/I_TIEStriker.png",
   "pilots": [
@@ -48,11 +69,19 @@
         "name": "Adaptive Ailerons",
         "text": "Before you reveal your dial, if you are not stressed, you must boost."
       },
-      "slots": ["Talent", "Talent", "Device", "Modification", "Gunner"],
+      "slots": [
+        "Talent",
+        "Talent",
+        "Device",
+        "Modification",
+        "Gunner"
+      ],
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/countdown.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -69,11 +98,19 @@
         "name": "Adaptive Ailerons",
         "text": "Before you reveal your dial, if you are not stressed, you must boost."
       },
-      "slots": ["Talent", "Talent", "Device", "Modification", "Gunner"],
+      "slots": [
+        "Talent",
+        "Talent",
+        "Device",
+        "Modification",
+        "Gunner"
+      ],
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/duchess.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -90,19 +127,26 @@
         "name": "Adaptive Ailerons",
         "text": "Before you reveal your dial, if you are not stressed, you must boost."
       },
-      "slots": ["Talent", "Device", "Modification", "Gunner"],
+      "slots": [
+        "Talent",
+        "Device",
+        "Modification",
+        "Gunner"
+      ],
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/puresabacc.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
       "name": "Black Squadron Scout",
       "initiative": 3,
       "limited": 0,
-      "cost": 4,
-      "loadout": 5,
+      "cost": 9,
+      "loadout": 8,
       "xws": "blacksquadronscout",
       "text": "These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.",
       "image": "https://infinitearenas.com/xw2/images/pilots/blacksquadronscout.png",
@@ -110,18 +154,24 @@
         "name": "Adaptive Ailerons",
         "text": "Before you reveal your dial, if you are not stressed, you must boost."
       },
-      "slots": ["Talent", "Device", "Gunner"],
+      "slots": [
+        "Talent",
+        "Device",
+        "Gunner"
+      ],
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/blacksquadronscout.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
       "name": "Planetary Sentinel",
       "initiative": 1,
       "limited": 0,
-      "cost": 4,
+      "cost": 8,
       "loadout": 4,
       "xws": "planetarysentinel",
       "text": "To protect its many military installations, the Empire requires a swift and vigilant defense force.",
@@ -130,11 +180,17 @@
         "name": "Adaptive Ailerons",
         "text": "Before you reveal your dial, if you are not stressed, you must boost."
       },
-      "slots": ["Device", "Modification", "Gunner"],
+      "slots": [
+        "Device",
+        "Modification",
+        "Gunner"
+      ],
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/planetarysentinel.png",
       "standard": true,
       "extended": true,
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     },
     {
@@ -149,13 +205,21 @@
       "caption": "Destitute Demolitionist",
       "standard": true,
       "extended": true,
-      "slots": ["Talent", "Gunner", "Device", "Device", "Modification"],
+      "slots": [
+        "Talent",
+        "Gunner",
+        "Device",
+        "Device",
+        "Modification"
+      ],
       "ability": "After you fully execute a maneuver using your Adaptive Ailerons, if you are not stressed, you may drop 1 device.",
       "cost": 4,
       "loadout": 12,
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/vagabond.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/vagabond.png",
-      "keywords": ["TIE"],
+      "keywords": [
+        "TIE"
+      ],
       "epic": true
     }
   ]

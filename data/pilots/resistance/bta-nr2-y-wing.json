@@ -19,19 +19,46 @@
     "4FR",
     "5KR"
   ],
-  "dialCodes": ["NR2"],
+  "dialCodes": [
+    "NR2"
+  ],
   "faction": "resistance",
   "stats": [
-    { "arc": "Front Arc", "type": "attack", "value": 2 },
-    { "type": "agility", "value": 1 },
-    { "type": "hull", "value": 4 },
-    { "type": "shields", "value": 3 }
+    {
+      "arc": "Front Arc",
+      "type": "attack",
+      "value": 2
+    },
+    {
+      "type": "agility",
+      "value": 1
+    },
+    {
+      "type": "hull",
+      "value": 4
+    },
+    {
+      "type": "shields",
+      "value": 3
+    }
   ],
   "actions": [
-    { "difficulty": "White", "type": "Focus" },
-    { "difficulty": "Red", "type": "Lock" },
-    { "difficulty": "Red", "type": "Barrel Roll" },
-    { "difficulty": "Red", "type": "Boost" }
+    {
+      "difficulty": "White",
+      "type": "Focus"
+    },
+    {
+      "difficulty": "Red",
+      "type": "Lock"
+    },
+    {
+      "difficulty": "Red",
+      "type": "Barrel Roll"
+    },
+    {
+      "difficulty": "Red",
+      "type": "Boost"
+    }
   ],
   "pilots": [
     {
@@ -45,8 +72,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 4,
-      "loadout": 9,
+      "cost": 12,
+      "loadout": 20,
       "slots": [
         "Talent",
         "Tech",
@@ -59,10 +86,15 @@
       ],
       "ability": "After a ship at range 1 performs an action during its Perform Action step, if that action is on your action bar, you may spend 1 [Charge] to perform that action, treating it as red.",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/zoriibliss.png",
-      "charges": { "value": 1, "recovers": 1 },
+      "charges": {
+        "value": 1,
+        "recovers": 1
+      },
       "image": "https://infinitearenas.com/xw2/images/pilots/zoriibliss.png",
       "caption": "Corsair of Kijimi",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -76,8 +108,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 4,
-      "loadout": 12,
+      "cost": 11,
+      "loadout": 18,
       "slots": [
         "Talent",
         "Tech",
@@ -93,7 +125,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/tezanasz.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/tezanasz.png",
       "caption": "Old Soldier",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -107,8 +141,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 4,
-      "loadout": 12,
+      "cost": 11,
+      "loadout": 17,
       "slots": [
         "Tech",
         "Missile",
@@ -124,7 +158,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/wilsateshlo.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/wilsateshlo.png",
       "caption": "Veiled Sorority Privateer",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -138,8 +174,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 3,
-      "loadout": 9,
+      "cost": 11,
+      "loadout": 15,
       "slots": [
         "Tech",
         "Turret",
@@ -153,7 +189,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/shasazaro.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/shasazaro.png",
       "caption": "Artistic Ace",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -167,8 +205,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 3,
-      "loadout": 7,
+      "cost": 10,
+      "loadout": 10,
       "slots": [
         "Tech",
         "Turret",
@@ -183,7 +221,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/legafossang.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/legafossang.png",
       "caption": "Hero of Humbarine",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -213,7 +253,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/aftabackbar.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/aftabackbar.png",
       "caption": "“Junior”",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -243,7 +285,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/coruskapellim.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/coruskapellim.png",
       "caption": "“Gentleman Flyer”",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -273,7 +317,9 @@
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/caithrenalli-btanr2ywing.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/caithrenalli-btanr2ywing.png",
       "caption": "Tenacious Survivor",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -287,8 +333,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 4,
-      "loadout": 7,
+      "cost": 10,
+      "loadout": 11,
       "slots": [
         "Talent",
         "Tech",
@@ -301,7 +347,9 @@
       "text": "Designed for customization, the BTA-NR2 Y-wing is used by numerous military organizations across the galaxy in a variety of roles, from law enforcement craft to wartime bombers.",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/newrepublicpatrol.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/newrepublicpatrol.png",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     },
     {
@@ -315,8 +363,8 @@
       },
       "standard": true,
       "extended": true,
-      "cost": 4,
-      "loadout": 4,
+      "cost": 11,
+      "loadout": 16,
       "slots": [
         "Tech",
         "Turret",
@@ -329,7 +377,9 @@
       "text": "Led by Zorii Bliss, the Kijimi Spice Runners set aside their usual mercenary ways to take the fight to the Final Order at the Battle of Exegol.",
       "artwork": "https://infinitearenas.com/xw2/images/artwork/pilots/kijimispicerunner.png",
       "image": "https://infinitearenas.com/xw2/images/pilots/kijimispicerunner.png",
-      "keywords": ["Y-wing"],
+      "keywords": [
+        "Y-wing"
+      ],
       "epic": true
     }
   ],
