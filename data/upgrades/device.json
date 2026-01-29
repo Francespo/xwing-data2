@@ -269,6 +269,7 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/electroprotonbomb.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 8
     },
@@ -280,6 +281,10 @@
         }
       }
     ],
+=======
+    "cost": { "value": 8 },
+    "restrictions": [{ "action": { "type": "Reload" } }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true

@@ -712,9 +712,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/q7astromech.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 1
     },
+=======
+    "cost": { "value": 1 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -937,6 +942,7 @@
       "value": 4
     },
     "restrictions": [
+<<<<<<< HEAD
       {
         "factions": [
           "resistance"
@@ -945,6 +951,10 @@
           "type": "Rotate Arc"
         }
       }
+=======
+      { "factions": ["resistance"] },
+      { "action": { "type": "Rotate Arc" } }
+>>>>>>> pr-697
     ],
     "standard": true,
     "extended": true,

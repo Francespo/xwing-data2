@@ -662,9 +662,14 @@
         "type": "Gunner"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 10
     },
+=======
+    "cost": { "value": 12 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "ahsokatano",
     "standard": true,
@@ -685,9 +690,14 @@
       }
     ],
     "name": "Clone Captain Rex",
+<<<<<<< HEAD
     "cost": {
       "value": 1
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "clonecaptainrex",
     "standard": true,
@@ -733,9 +743,14 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/bobafett-gunner.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 4
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [{ "factions": ["separatistalliance", "scumandvillainy"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -779,16 +794,21 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/sabinewren-gunner.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 1
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [{ "factions": ["rebelalliance"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
   },
   {
     "name": "DT-798",
-    "limited": 0,
+    "limited": 1,
     "xws": "dt798",
     "sides": [
       {

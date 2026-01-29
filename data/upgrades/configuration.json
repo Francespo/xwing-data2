@@ -593,9 +593,14 @@
       }
     ],
     "name": "Repulsorlift Stabilizers",
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
+=======
+    "cost": { "value": 0 },
+    "restrictions": [{ "ships": ["hmpdroidgunship"] }],
+>>>>>>> pr-697
     "limited": 0,
     "xws": "repulsorliftstabilizers",
     "standard": true,
@@ -618,9 +623,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/alpha3bbesh.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 1
     },
+=======
+    "cost": { "value": 1 },
+    "restrictions": [{ "ships": ["nimbusclassvwing"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -645,9 +655,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/alpha3eesk.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
+=======
+    "cost": { "value": 0 },
+    "restrictions": [{ "ships": ["nimbusclassvwing"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -695,9 +710,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/interceptbooster-sideb.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
+=======
+    "cost": { "value": 0 },
+    "restrictions": [{ "ships": ["droidtrifighter"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -738,9 +758,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/maneuverassistmgk300.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
+=======
+    "cost": { "value": 0 },
+    "restrictions": [{"ships": ["tierbheavy"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -781,9 +806,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/targetassistmgk300.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
+=======
+    "cost": { "value": 0 },
+    "restrictions": [{"ships": ["tierbheavy"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -1035,6 +1065,7 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/enhancedjammingsuite.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 0
     },
@@ -1044,6 +1075,12 @@
           "tiewiwhispermodifiedinterceptor"
         ]
       }
+=======
+    "cost": { "value": 0 },
+    "restrictions": [
+      { "ships": ["tiewiwhispermodifiedinterceptor"] },
+      { "standardized": true }
+>>>>>>> pr-697
     ],
     "standard": true,
     "extended": true,

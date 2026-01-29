@@ -593,9 +593,14 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/overdrivethruster.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 5
     },
+=======
+    "cost": { "value": 5 },
+    "restrictions": [{ "ships": ["t70xwing"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -647,9 +652,14 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/mandalorianoptics.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 3
     },
+=======
+    "cost": { "value": 3 },
+    "restrictions": [{ "keywords": ["Mandalorian"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -716,9 +726,14 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/beskarreinforcedplating.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 6
     },
+=======
+    "cost": { "value": 3 },
+    "restrictions": [{ "keywords": ["Mandalorian"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true

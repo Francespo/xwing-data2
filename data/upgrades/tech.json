@@ -136,6 +136,13 @@
     "cost": {
       "value": 3
     },
+    "restrictions": [
+      {
+        "action": {
+          "type": "Lock"
+        }
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -222,6 +229,13 @@
     "cost": {
       "value": 7
     },
+    "restrictions": [
+      {
+        "factions": [
+          "firstorder"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -283,6 +297,19 @@
     "cost": {
       "value": 4
     },
+    "restrictions": [
+      {
+        "factions": [
+          "firstorder"
+        ]
+      },
+      {
+        "sizes": [
+          "Medium",
+          "Large"
+        ]
+      }
+    ],
     "limited": 1,
     "xws": "sensorbuoysuite",
     "standard": true,

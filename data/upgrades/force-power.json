@@ -258,9 +258,14 @@
         "type": "Force Power"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 8
     },
+=======
+    "cost": { "value": 15 },
+    "restrictions": [{ "sizes": ["Small"] }],
+>>>>>>> pr-697
     "xws": "precognitivereflexes",
     "standard": false,
     "extended": true,
@@ -282,9 +287,17 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/extrememaneuvers.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 3
     },
+=======
+    "cost": { "value": 8 },
+    "restrictions": [
+      { "sizes": ["Small"] },
+      { "action": { "type": "Boost" } }
+    ],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -305,9 +318,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/compassion.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 1
     },
+=======
+    "cost": { "value": 1 },
+    "restrictions": [{ "force_side": ["light"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -328,9 +346,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/malice.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 5
     },
+=======
+    "cost": { "value": 4 },
+    "restrictions": [{ "force_side": ["dark"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -374,9 +397,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/patience.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 2
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [{ "force_side": ["light"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true

@@ -136,7 +136,7 @@
       "cost": 15,
       "loadout": 20,
       "initiative": 1,
-      "limited": 0,
+      "limited": 1,
       "standard": true,
       "extended": true,
       "epic": true,

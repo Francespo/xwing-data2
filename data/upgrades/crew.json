@@ -696,6 +696,7 @@
         "artwork": "https://infinitearenas.com/xw2/images/artwork/upgrades/generalhux.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 6
     },
@@ -705,6 +706,12 @@
           "firstorder"
         ]
       }
+=======
+    "cost": { "value": 3 },
+    "restrictions": [
+      { "factions": ["firstorder"] },
+      { "action": { "type": "Coordinate" } }
+>>>>>>> pr-697
     ],
     "standard": true,
     "extended": true,
@@ -2477,9 +2484,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/aaylasecura.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 12
     },
+=======
+    "cost": { "value": 12 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -2510,9 +2522,14 @@
         "ability": "During the System Phase, roll 1 attack die. On a [Hit] or [Critical Hit] result, gain 1 calculate token. Otherwise gain 1 jam token. Action: Transfer 1 calculate token or 1 jam token to a ship at range 0-3."
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 7
     },
+=======
+    "cost": { "value": 7 },
+    "restrictions": [{ "factions": ["firstorder"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -2549,9 +2566,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/k2so.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 8
     },
+=======
+    "cost": { "value": 6 },
+    "restrictions": [{ "factions": ["rebelalliance"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -2585,9 +2607,14 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/plokoon.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 9
     },
+=======
+    "cost": { "value": 9 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true
@@ -2655,9 +2682,14 @@
       }
     ],
     "name": "Kit Fisto",
+<<<<<<< HEAD
     "cost": {
       "value": 9
     },
+=======
+    "cost": { "value": 8 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "kitfisto",
     "standard": true,
@@ -2691,9 +2723,14 @@
       }
     ],
     "name": "Yoda",
+<<<<<<< HEAD
     "cost": {
       "value": 12
     },
+=======
+    "cost": { "value": 12 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "yoda",
     "standard": true,
@@ -2714,9 +2751,14 @@
       }
     ],
     "name": "“Fives”",
+<<<<<<< HEAD
     "cost": {
       "value": 3
     },
+=======
+    "cost": { "value": 3 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "fives",
     "standard": true,
@@ -2738,9 +2780,14 @@
       }
     ],
     "name": "Wolfpack",
+<<<<<<< HEAD
     "cost": {
       "value": 4
     },
+=======
+    "cost": { "value": 4 },
+    "restrictions": [{ "factions": ["galacticrepublic"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "wolfpack",
     "standard": true,
@@ -2771,9 +2818,14 @@
       }
     ],
     "name": "Commander Malarus",
+<<<<<<< HEAD
     "cost": {
       "value": 2
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [{ "factions": ["firstorder"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "commandermalarus",
     "standard": true,
@@ -2808,9 +2860,17 @@
       }
     ],
     "name": "Ghost Company",
+<<<<<<< HEAD
     "cost": {
       "value": 5
     },
+=======
+    "cost": { "value": 5 },
+    "restrictions": [
+      { "factions": ["galacticrepublic"] },
+      { "action": { "type": "Rotate Arc" } }
+    ],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "ghostcompany",
     "standard": true,
@@ -2831,9 +2891,14 @@
       }
     ],
     "name": "Commander Pyre",
+<<<<<<< HEAD
     "cost": {
       "value": 10
     },
+=======
+    "cost": { "value": 5 },
+    "restrictions": [{ "factions": ["firstorder"] }],
+>>>>>>> pr-697
     "limited": 1,
     "xws": "commanderpyre",
     "standard": false,

@@ -247,9 +247,17 @@
         "image": "https://infinitearenas.com/xw2/images/upgrades/underslungblastercannon.png"
       }
     ],
+<<<<<<< HEAD
     "cost": {
       "value": 2
     },
+=======
+    "cost": { "value": 2 },
+    "restrictions": [
+      { "factions": ["resistance"] },
+      { "ships": ["t70xwing"]}
+    ],
+>>>>>>> pr-697
     "standard": true,
     "extended": true,
     "epic": true

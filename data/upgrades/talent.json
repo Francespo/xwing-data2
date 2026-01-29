@@ -780,6 +780,13 @@
     "cost": {
       "value": 3
     },
+    "restrictions": [
+      {
+        "ships": [
+          "nantexclassstarfighter"
+        ]
+      }
+    ],
     "xws": "graviticdeflection",
     "standard": true,
     "extended": true,
@@ -814,6 +821,13 @@
     "cost": {
       "value": 2
     },
+    "restrictions": [
+      {
+        "factions": [
+          "firstorder"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -835,6 +849,14 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "sizes": [
+          "Small",
+          "Medium"
+        ]
+      }
+    ],
     "limited": 0,
     "xws": "deadeyeshot",
     "standard": true,
@@ -860,6 +882,18 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "keywords": [
+          "X-wing"
+        ]
+      },
+      {
+        "equipped": [
+          "Configuration"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -913,6 +947,14 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "sizes": [
+          "Small",
+          "Medium"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -936,6 +978,13 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "keywords": [
+          "A-wing"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -959,6 +1008,13 @@
     "cost": {
       "value": 2
     },
+    "restrictions": [
+      {
+        "factions": [
+          "scumandvillainy"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -982,6 +1038,13 @@
     "cost": {
       "value": 2
     },
+    "restrictions": [
+      {
+        "factions": [
+          "galacticempire"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -1005,6 +1068,13 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "factions": [
+          "rebelalliance"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
@@ -1058,6 +1128,13 @@
     "cost": {
       "value": 1
     },
+    "restrictions": [
+      {
+        "keywords": [
+          "Y-wing"
+        ]
+      }
+    ],
     "standard": true,
     "extended": true,
     "epic": true
