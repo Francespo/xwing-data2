@@ -194,7 +194,7 @@
       "standard": true,
       "extended": true,
       "cost": 11,
-      "loadout": 11,
+      "loadout": 9,
       "charges": {
         "value": 2,
         "recovers": 1

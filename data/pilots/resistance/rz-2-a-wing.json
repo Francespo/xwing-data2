@@ -176,7 +176,7 @@
       "initiative": 4,
       "limited": 1,
       "cost": 9,
-      "loadout": 8,
+      "loadout": 10,
       "xws": "greersonnel",
       "ability": "After you fully execute a maneuver, you may rotate your [Single Turret Arc].",
       "shipAbility": {
