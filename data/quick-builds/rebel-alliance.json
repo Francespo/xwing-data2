@@ -546,7 +546,7 @@
         {
           "id": "rebelscout",
           "upgrades": {
-            "crew": ["sabinewren"],
+            "crew": ["sabinewren-crew"],
             "device": ["seismiccharges", "protonbombs"],
             "modification": ["engineupgrade"]
           }
@@ -1106,7 +1106,7 @@
         {
           "id": "lothalrebel",
           "upgrades": {
-            "crew": ["landocalrissian"],
+            "crew": ["landocalrissian-crew-rebel"],
             "turret": ["dorsalturret"],
             "title": ["ghost"]
           }
@@ -1182,7 +1182,7 @@
         {
           "id": "leiaorgana",
           "upgrades": {
-            "crew": ["landocalrissian", "chewbacca", "r2d2-crew"],
+            "crew": ["landocalrissian-crew-rebel", "chewbacca", "r2d2-crew"],
             "modification": ["engineupgrade"],
             "title": ["millenniumfalcon"]
           }
@@ -1251,7 +1251,7 @@
         {
           "id": "outerrimsmuggler",
           "upgrades": {
-            "crew": ["landocalrissian", "informant"],
+            "crew": ["landocalrissian-crew-rebel", "informant"],
             "modification": ["engineupgrade"],
             "illicit": ["riggedcargochute"]
           }
