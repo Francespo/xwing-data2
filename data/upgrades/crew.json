@@ -5045,7 +5045,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0993",
@@ -5064,7 +5066,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0994",
@@ -5083,7 +5087,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0995",
@@ -5106,7 +5112,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0996",
@@ -5125,7 +5133,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0997",
@@ -5144,7 +5154,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0998",
@@ -5167,7 +5179,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN0999",
@@ -5186,7 +5200,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1000",
@@ -5209,7 +5225,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1001",
@@ -5228,7 +5246,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1002",
@@ -5247,7 +5267,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1003",
@@ -5266,7 +5288,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1004",
@@ -5285,7 +5309,9 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   },
   {
     "uid": "UGN1005",
@@ -5304,6 +5330,8 @@
     ],
     "standardLoadoutOnly": true,
     "epic": true,
-    "restricted": 0
+    "restricted": 0,
+    "standard": false,
+    "extended": false
   }
 ]

@@ -23,4 +23,5 @@ jobs:
     - name: Running tests
       run: yarn run validate:tests --ci
     - name: Running YASB sync tests
+      if: always()
       run: python3 -m unittest tests.test_yasb_cards -v
