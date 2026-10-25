@@ -139,7 +139,7 @@
       "caption": "Alert Flight Controller",
       "initiative": 1,
       "limited": 1,
-      "cost": 4,
+      "cost": 15,
       "loadout": 15,
       "charges": {
         "value": 1,
