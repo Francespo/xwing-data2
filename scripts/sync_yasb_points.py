@@ -4,7 +4,7 @@
 Designed for Francespo/xwing-data2 (the XWA data source consumed by
 xwing-unified-data). It does **not** mirror all current YASB values: the data
 repo intentionally differs from YASB for some variants/loadouts. It fetches the
-YASB file at the latest points-release commit and at its parent, diffs only the
+YASB file at a points-release commit and at its parent, diffs only the
 points/loadout fields, and applies that release diff.
 
 The workflow commits with:
@@ -12,6 +12,18 @@ The workflow commits with:
     data: apply YASB 50P 2.2 points (2026-12-01)
 
 The unified detector parses the version and release date from that subject.
+
+Matching lives in ``scripts/yasb_cards.py``. Pilots are matched using the
+enclosing ship file's ship/faction, not just the pilot name, so YASB variants
+such as ``Anakin Skywalker (Delta-7b)`` reach the right card. A release entry
+that cannot be matched fails the run (``--allow-unmatched`` overrides) instead
+of being skipped silently.
+
+Historical releases can be backfilled explicitly::
+
+    python3 scripts/sync_yasb_points.py \
+        --sha <release-sha> --parent-sha <parent-sha> \
+        --version 2.1 --date 2026-08-16
 """
 
 from __future__ import annotations
@@ -23,6 +35,15 @@ import re
 import sys
 import urllib.request
 from pathlib import Path
+
+from yasb_cards import (
+    build_pilot_index,
+    build_upgrade_index,
+    entry_identity,
+    lookup_pilot,
+    lookup_upgrade,
+    release_diff,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -44,105 +65,6 @@ def fetch(url: str) -> str:
     request = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(request, timeout=60) as response:
         return response.read().decode("utf-8")
-
-
-def normalize(value: str | None) -> str:
-    return re.sub(r"[^a-z0-9]", "", str(value or "").lower())
-
-
-def parse_yasb(text: str) -> dict[str, dict]:
-    """Parse pilots/upgrades keyed by a canonical identity."""
-    entries: dict[str, dict] = {}
-
-    for block in re.split(r'\n\s*name:\s*"', text)[1:]:
-        name_match = re.match(r'^([^"]+)"', block)
-        if not name_match:
-            continue
-        name = name_match.group(1)
-
-        points_match = re.search(r"^\s*points:\s*(\d+)", block, re.MULTILINE)
-        if not points_match:
-            continue
-        loadout_match = re.search(r"^\s*loadout:\s*(\d+)", block, re.MULTILINE)
-        ship_match = re.search(r'^\s*ship:\s*"([^"]+)"', block, re.MULTILINE)
-        faction_match = re.search(r'^\s*faction:\s*"([^"]+)"', block, re.MULTILINE)
-        slot_match = re.search(r'^\s*slot:\s*"([^"]+)"', block, re.MULTILINE)
-
-        kind = (
-            "upgrade"
-            if slot_match and not re.search(r"^\s*skill:\s*\d+", block, re.MULTILINE)
-            else "pilot"
-        )
-        entry = {
-            "name": name,
-            "ship": ship_match.group(1) if ship_match else "",
-            "faction": faction_match.group(1) if faction_match else "",
-            "slot": slot_match.group(1) if slot_match else "",
-            "kind": kind,
-            "points": int(points_match.group(1)),
-            "loadout": int(loadout_match.group(1)) if loadout_match else None,
-        }
-        identity = "|".join(
-            [
-                kind,
-                normalize(name),
-                normalize(entry["ship"]),
-                normalize(entry["faction"]),
-                normalize(entry["slot"]),
-            ]
-        )
-        entries[identity] = entry
-
-    return entries
-
-
-def entry_keys(entry: dict) -> list[str]:
-    base = normalize(entry["name"])
-    keys = [base]
-    ship = normalize(entry["ship"])
-    faction = normalize(entry["faction"])
-    slot = normalize(entry["slot"])
-
-    if ship:
-        keys.insert(0, f"{base}|{ship}")
-        if faction:
-            keys.insert(0, f"{base}|{ship}|{faction}")
-    if entry["kind"] == "upgrade" and slot:
-        keys.insert(0, f"{base}|{slot}|{ship}|{faction}")
-        keys.insert(0, f"{base}|{slot}")
-    return keys
-
-
-def build_maps(entries: list[dict]) -> tuple[dict[str, dict], dict[str, dict]]:
-    pilots: dict[str, dict] = {}
-    upgrades: dict[str, dict] = {}
-    for entry in entries:
-        target = upgrades if entry["kind"] == "upgrade" else pilots
-        for key in entry_keys(entry):
-            target[key] = entry
-    return pilots, upgrades
-
-
-def lookup_pilot(pilots: dict[str, dict], pilot: dict) -> dict | None:
-    name = normalize(pilot.get("name") or pilot.get("xws"))
-    ship = normalize(pilot.get("ship"))
-    faction = normalize(pilot.get("faction"))
-    for key in (f"{name}|{ship}|{faction}", f"{name}|{ship}", name):
-        if key in pilots:
-            return pilots[key]
-    return None
-
-
-def lookup_upgrade(upgrades: dict[str, dict], upgrade: dict) -> dict | None:
-    name = normalize(upgrade.get("name") or upgrade.get("xws"))
-    sides = upgrade.get("sides") or []
-    slot = ""
-    if sides and isinstance(sides[0], dict):
-        slot = normalize(sides[0].get("type"))
-    for key in (f"{name}|{slot}", name):
-        if key in upgrades:
-            return upgrades[key]
-    return None
 
 
 def latest_release() -> tuple[str | None, str | None, str | None, str | None]:
@@ -169,36 +91,25 @@ def latest_release() -> tuple[str | None, str | None, str | None, str | None]:
     return None, None, None, None
 
 
-def release_diff(old_text: str, new_text: str) -> list[dict]:
-    old_entries = parse_yasb(old_text)
-    new_entries = parse_yasb(new_text)
-    changes: list[dict] = []
-    for identity, entry in new_entries.items():
-        previous = old_entries.get(identity)
-        if not previous:
-            continue
-        if previous["points"] != entry["points"]:
-            changes.append(entry)
-        elif entry["loadout"] is not None and previous["loadout"] != entry["loadout"]:
-            changes.append(entry)
-    return changes
-
-
 def write_json(path: Path, data) -> None:
     path.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
 
-def apply_pilots(pilots: dict[str, dict], dry_run: bool) -> list[str]:
+def apply_pilots(pilots: dict, dry_run: bool) -> tuple[list[str], set[str]]:
     changes: list[str] = []
+    matched: set[str] = set()
     for path in sorted((DATA / "pilots").rglob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
+        ship = data.get("name") or data.get("xws") or ""
+        faction = data.get("faction") or ""
         dirty = False
         for pilot in data.get("pilots", []):
-            match = lookup_pilot(pilots, pilot)
+            match = lookup_pilot(pilots, pilot, ship, faction)
             if not match:
                 continue
+            matched.add(entry_identity(match))
             if pilot.get("cost") != match["points"]:
                 changes.append(
                     f"{pilot.get('xws') or pilot.get('name')}: cost "
@@ -215,11 +126,12 @@ def apply_pilots(pilots: dict[str, dict], dry_run: bool) -> list[str]:
                 dirty = True
         if dirty and not dry_run:
             write_json(path, data)
-    return changes
+    return changes, matched
 
 
-def apply_upgrades(upgrades: dict[str, dict], dry_run: bool) -> list[str]:
+def apply_upgrades(upgrades: dict, dry_run: bool) -> tuple[list[str], set[str]]:
     changes: list[str] = []
+    matched: set[str] = set()
     for path in sorted((DATA / "upgrades").glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(data, list):
@@ -234,6 +146,7 @@ def apply_upgrades(upgrades: dict[str, dict], dry_run: bool) -> list[str]:
             match = lookup_upgrade(upgrades, upgrade)
             if not match:
                 continue
+            matched.add(entry_identity(match))
             new_cost = match["points"]
             cost = upgrade.get("cost")
             if isinstance(cost, dict):
@@ -261,24 +174,52 @@ def apply_upgrades(upgrades: dict[str, dict], dry_run: bool) -> list[str]:
                 dirty = True
         if dirty and not dry_run:
             write_json(path, data)
-    return changes
+    return changes, matched
+
+
+def _format_entry(entry: dict) -> str:
+    suffix = f" ({entry['suffix']})" if entry.get("suffix") else ""
+    return (
+        f"{entry['kind']}: {entry['name']}{suffix} "
+        f"[{entry.get('ship') or 'no ship'} / {entry.get('faction') or 'no faction'}] "
+        f"{entry['points']}/{entry.get('loadout')}"
+    )
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--version", help="YASB points version override, e.g. 2.2")
     parser.add_argument("--date", help="release date override (YYYY-MM-DD)")
+    parser.add_argument("--sha", help="YASB release commit SHA (history backfill)")
+    parser.add_argument("--parent-sha", help="parent SHA for --sha")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--meta", type=Path, help="write JSON metadata for the workflow")
+    parser.add_argument(
+        "--allow-unmatched",
+        action="store_true",
+        help="warn instead of failing when a release entry has no data card",
+    )
     args = parser.parse_args()
 
-    release_version, release_date, sha, parent_sha = latest_release()
-    version = args.version or release_version
-    release_date = args.date or release_date
+    if args.sha:
+        if not args.parent_sha:
+            print("error: --sha requires --parent-sha", file=sys.stderr)
+            return 1
+        sha, parent_sha = args.sha, args.parent_sha
+    else:
+        release_version, release_date, sha, parent_sha = latest_release()
+        args.version = args.version or release_version
+        args.date = args.date or release_date
 
     if not sha or not parent_sha:
         print(
-            "error: cannot resolve the latest YASB points release commit/parent",
+            "error: cannot resolve the YASB points release commit/parent",
+            file=sys.stderr,
+        )
+        return 1
+    if args.sha and (not args.version or not args.date):
+        print(
+            "error: historical backfill requires --version and --date",
             file=sys.stderr,
         )
         return 1
@@ -298,12 +239,35 @@ def main() -> int:
         )
         return 1
 
-    pilots, upgrades = build_maps(release_entries)
-    pilot_changes = apply_pilots(pilots, args.dry_run)
-    upgrade_changes = apply_upgrades(upgrades, args.dry_run)
+    pilot_changes, matched_pilots = apply_pilots(
+        build_pilot_index(release_entries), args.dry_run
+    )
+    upgrade_changes, matched_upgrades = apply_upgrades(
+        build_upgrade_index(release_entries), args.dry_run
+    )
     changes = pilot_changes + upgrade_changes
+    matched = matched_pilots | matched_upgrades
+    unmatched = [
+        entry for entry in release_entries if entry_identity(entry) not in matched
+    ]
 
-    if changes and (not version or not release_date):
+    if unmatched:
+        print(
+            f"warning: {len(unmatched)} YASB release entr"
+            f"{'y' if len(unmatched) == 1 else 'ies'} did not match any data card:",
+            file=sys.stderr,
+        )
+        for entry in unmatched:
+            print(f"  - {_format_entry(entry)}", file=sys.stderr)
+        if not args.allow_unmatched:
+            print(
+                "error: refusing a silent skip; fix the matcher or rerun with "
+                "--allow-unmatched after reviewing the list",
+                file=sys.stderr,
+            )
+            return 1
+
+    if changes and (not args.version or not args.date):
         print(
             "error: points changed but no YASB release version/date was found; "
             "pass --version and --date explicitly",
@@ -312,15 +276,16 @@ def main() -> int:
         return 1
 
     message = (
-        f"data: apply YASB 50P {version} points ({release_date})" if changes else ""
+        f"data: apply YASB 50P {args.version} points ({args.date})" if changes else ""
     )
     meta = {
         "changed": bool(changes),
-        "version": version,
-        "date": release_date,
+        "version": args.version,
+        "date": args.date,
         "release_sha": sha,
         "parent_sha": parent_sha,
         "release_entries": len(release_entries),
+        "unmatched_entries": len(unmatched),
         "pilot_changes": len(pilot_changes),
         "upgrade_changes": len(upgrade_changes),
         "changes": changes[:50],
