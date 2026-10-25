@@ -52,6 +52,13 @@ jobs:
           if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
           python3 scripts/sync_yasb_points.py $ARGS
 
+      - name: Reconcile every pilot with the YASB release snapshot
+        run: |
+          python3 scripts/check_yasb_pilots.py \
+            --sha "$(jq -r .release_sha /tmp/yasb_meta.json)" \
+            --version "$(jq -r .version /tmp/yasb_meta.json)" \
+            --date "$(jq -r .date /tmp/yasb_meta.json)"
+
       - name: Commit and push the points release
         run: |
           if [ "$(jq -r .changed /tmp/yasb_meta.json)" != "true" ]; then

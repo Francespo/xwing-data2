@@ -1,6 +1,18 @@
 {
   "properties": {
+    "uid": { "type": "string" },
+    "restricted": { "type": "integer", "minimum": 0 },
     "name": { "type": "string" },
+    "charges": {
+      "type": "object",
+      "properties": {
+        "value": { "type": "integer", "minimum": 0 },
+        "recovers": { "type": "integer", "minimum": -1, "maximum": 2 }
+      },
+      "required": ["value", "recovers"],
+      "additionalProperties": false
+    },
+    "grants": { "type": "array", "items": { "type": "object" } },
     "limited": { "type": "integer", "minimum": 0 },
     "cost": {
       "oneOf": [
@@ -125,6 +137,21 @@
               "type": "string",
               "enum": ["Small", "Medium", "Large", "Huge"]
             }
+          },
+          "initiative": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "shields": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "energy": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
           },
           "force_side": {
             "type": "array",
@@ -303,7 +330,11 @@
                 "cr90corelliancorvette",
                 "fireball",
                 "rogueclassstarfighter",
-                "syliureclasshyperspacering"
+                "syliureclasshyperspacering",
+                "droidtrifighter",
+                "hmpdroidgunship",
+                "nimbusclassvwing",
+                "tierbheavy"
               ]
             }
           },
