@@ -98,7 +98,7 @@
         {
           "id": "lattsrazzi",
           "upgrades": {
-            "crew": ["bobafett"],
+            "crew": ["bobafett-crew"],
             "gunner": ["dengar", "bossk"],
             "illicit": ["feedbackarray"],
             "modification": ["staticdischargevanes"]

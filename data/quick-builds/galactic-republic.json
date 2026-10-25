@@ -109,10 +109,8 @@
       "threat": 2,
       "pilots": [
         {
-          "id": "jediknight",
-          "upgrades": {
-            "configuration": ["delta7b"]
-          }
+          "id": "jediknight-delta7baethersprite",
+          "upgrades": {}
         }
       ]
     },
@@ -120,11 +118,10 @@
       "threat": 3,
       "pilots": [
         {
-          "id": "luminaraunduli",
+          "id": "luminaraunduli-delta7baethersprite",
           "upgrades": {
             "force-power": ["brilliantevasion"],
             "astromech": ["r4pastromech"],
-            "configuration": ["delta7b"],
             "modification": ["shieldupgrade"]
           }
         }
@@ -160,11 +157,10 @@
       "threat": 3,
       "pilots": [
         {
-          "id": "saeseetiin",
+          "id": "saeseetiin-delta7baethersprite",
           "upgrades": {
             "force-power": ["supernaturalreflexes"],
-            "astromech": ["r4pastromech"],
-            "configuration": ["delta7b"]
+            "astromech": ["r4pastromech"]
           }
         }
       ]
@@ -173,11 +169,10 @@
       "threat": 4,
       "pilots": [
         {
-          "id": "macewindu",
+          "id": "macewindu-delta7baethersprite",
           "upgrades": {
             "force-power": ["supernaturalreflexes"],
             "astromech": ["r2astromech"],
-            "configuration": ["delta7b"],
             "modification": ["afterburners", "shieldupgrade"]
           }
         }

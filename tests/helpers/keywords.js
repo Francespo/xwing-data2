@@ -60,6 +60,7 @@ const ACTIONS = [
 
 const MISC = [
   "Charge",
+  "Crit",
   "Critical Hit",
   "Evade",
   "Focus",
@@ -67,7 +68,8 @@ const MISC = [
   "Hit",
   "Shield",
   "Energy",
-  "Ordnance"
+  "Ordnance",
+  "Point Large"
 ];
 
 const SIZES = ["Small", "Large", "Medium"];
